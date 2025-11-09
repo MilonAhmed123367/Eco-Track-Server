@@ -23,6 +23,12 @@ app.get('/', (req, res) => {
   res.send({ ok: true, message: 'EcoTrack API' });
 });
 
+const challengesRouter = require('./routes/Challenge');
+app.use('/api/challenges', challengesRouter);
+
+app.use((req, res) => {
+  res.status(404).json({ message: 'Not Found' });
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
