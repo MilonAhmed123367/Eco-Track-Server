@@ -1,4 +1,3 @@
-// models/Event.js
 const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema({
@@ -8,7 +7,7 @@ const eventSchema = new mongoose.Schema({
   location: String,
   organizer: String,
   maxParticipants: Number,
-  currentParticipants: { type: Number, default: 0 },
+  currentParticipants: { type: Number, default: 0 }
 });
 
 module.exports = mongoose.model('Event', eventSchema);

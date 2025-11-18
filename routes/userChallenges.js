@@ -1,10 +1,10 @@
-// routes/userChallenges.js
 const express = require('express');
 const router = express.Router();
 const Challenge = require('../models/Challenge');
 
 router.get('/', async (req, res) => {
   const userId = req.query.userId;
+
   if (!userId) {
     return res.status(400).json({ message: 'userId is required' });
   }
