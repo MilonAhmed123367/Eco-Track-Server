@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   const userId = req.query.userId;
 
   if (!userId) {
-    return res.status(400).json({ message: 'userId is required' });
+    return res.status(400).json({ message: 'Id is required' });
   }
 
   try {
